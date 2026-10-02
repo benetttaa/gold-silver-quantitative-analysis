@@ -71,15 +71,18 @@ This provides a normalized measure of daily price movement.
 ### 2. Rolling Volatility
 
 A 252-trading-day rolling standard deviation of daily returns is calculated
-and annualized:
+to measure how realized volatility changes over time. The volatility is
+annualized using the square root of 252:
 
 $$
 \sigma_{\text{annualized}}
 =
-\sigma_{\text{daily}}\sqrt{252}
+\sigma_{\text{252-day returns}}\sqrt{252}
 $$
 
-This is used to identify changes in realized volatility through time.
+A 252-day window corresponds approximately to one trading year. This
+rolling measure helps identify periods of relatively low, moderate, and
+elevated volatility throughout the analysis period.
 
 ### 3. Volatility Regimes
 
