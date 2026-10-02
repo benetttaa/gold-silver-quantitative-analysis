@@ -22,19 +22,6 @@ to study:
 The analysis is designed to quantify price behavior using reproducible
 statistical methods rather than relying on qualitative market narratives.
 
-## Research Questions
-
-The analysis focuses on the following questions:
-
-1. How have Gold and Silver returns behaved over the analysis period?
-2. How does realized volatility vary through time?
-3. Which metal exhibits greater historical volatility?
-4. When have unusually high-volatility regimes occurred?
-5. How do current prices compare with their long-term trends?
-6. How frequently do prices move outside their statistical bands?
-7. How closely are Gold and Silver returns related?
-8. How does the Gold/Silver ratio evolve over time?
-
 ## Data
 
 Daily market data is retrieved using the `yfinance` Python library.
@@ -72,13 +59,10 @@ This provides a normalized measure of daily price movement.
 
 A 252-trading-day rolling standard deviation of daily returns is calculated
 to measure how realized volatility changes over time. The volatility is
-annualized using the square root of 252:
+annualized using the square root of 252.
 
-$$
-\sigma_{\text{annualized}}
-=
-\sigma_{\text{252-day returns}}\sqrt{252}
-$$
+The annualized volatility is calculated as
+$\sigma_{\text{annualized}} = \sigma_{\text{252-day returns}}\sqrt{252}$.
 
 A 252-day window corresponds approximately to one trading year. This
 rolling measure helps identify periods of relatively low, moderate, and
